@@ -1,0 +1,15 @@
+.box {
+  width: 287px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #fff;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.active {
+  background-color: #5fbf77;
+  color: #fff;
+}

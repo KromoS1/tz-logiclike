@@ -1,0 +1,31 @@
+:root {
+  font-family: Nunito, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #39414b;
+
+  color-scheme: light dark;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+

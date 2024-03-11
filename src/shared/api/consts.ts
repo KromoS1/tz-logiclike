@@ -1,0 +1,3 @@
+export const QUERY_KEYS = {
+  GET_CATEGORIES: "QUERY/GET_CATEGORIES",
+};
