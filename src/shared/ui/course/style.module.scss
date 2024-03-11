@@ -1,0 +1,34 @@
+.box {
+  flex: 1 1 30%;
+  min-width: 210px;
+  height: 210px;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+
+  .picture {
+    width: 100%;
+    height: 162px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+
+    .image {
+      width: 100%; /* Изображение занимает всю ширину родительского элемента */
+      height: 100%; /* Изображение занимает всю высоту родительского элемента */
+      background-size: contain; /* Масштабирование изображения для заполнения родительского элемента, сохраняя пропорции */
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .title {
+    height: 48px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

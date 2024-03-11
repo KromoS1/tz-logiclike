@@ -1,5 +1,5 @@
 import { ButtonNameCourse } from "@/shared";
-import "./style.scss";
+import styles from "./style.module.scss";
 import { useMemo } from "react";
 import { useTags } from "./module";
 
@@ -21,7 +21,7 @@ export const Sidebar = () => {
   );
 
   return (
-    <div className="sidebar">
+    <div className={styles.sidebar}>
       <ButtonNameCourse
         title={"Все темы"}
         value={null}

@@ -1,5 +1,5 @@
 import { FC, memo, useMemo } from "react";
-import "./styles.scss";
+import styles from "./styles.module.scss";
 
 type PropsType = {
   title: string;
@@ -10,12 +10,15 @@ type PropsType = {
 
 export const ButtonNameCourse: FC<PropsType> = memo(
   ({ title, value, isActive, selectTag }) => {
-    const activeClass = useMemo(() => (isActive ? "active" : ""), [isActive]);
+    const activeClass = useMemo(
+      () => (isActive ? styles.active : ""),
+      [isActive]
+    );
 
     const click = () => selectTag(value);
 
     return (
-      <div className={`box ${activeClass}`} onClick={click}>
+      <div className={`${styles.box} ${activeClass}`} onClick={click}>
         {title}
       </div>
     );

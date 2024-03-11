@@ -1,16 +1,22 @@
 import { FC, memo } from "react";
-import "./style.scss";
-import { TCourses } from "@/entities/courses/types";
+import styles from "./style.module.scss";
 
 type PropsType = {
-  course: TCourses;
+  image: string;
+  bgColor: string;
+  name: string;
 };
 
-export const Course: FC = memo(() => {
+export const Course: FC<PropsType> = memo(({ image, bgColor, name }) => {
   return (
-    <div className="box">
-      <div className="picture"></div>
-      <div className="title"></div>
+    <div className={styles.box}>
+      <div className={styles.picture} style={{ backgroundColor: bgColor }}>
+        <div
+          className={styles.image}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      </div>
+      <div className={styles.title}>{name}</div>
     </div>
   );
 });

@@ -27,7 +27,7 @@ const useCoursesBase = create<StateType & ActionsType>(set => ({
     set(store => ({
       state: {
         ...store.state,
-        categories: [...courses],
+        courses: [...courses],
       },
     })),
 }));
