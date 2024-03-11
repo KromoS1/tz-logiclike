@@ -1,20 +1,20 @@
-import { TCategory, useCategories } from "@/entities";
+import { TCourses, useCourses } from "@/entities";
 import { QUERY_KEYS, instance, noRefetch } from "@/shared";
 import { useQuery } from "react-query";
 
-export const useCategoriesQuery = () => {
-  const setCategories = useCategories.use.setCategories();
-  const setAllTags = useCategories.use.setAllTags();
+export const useCoursesQuery = () => {
+  const setCourses = useCourses.use.setCourses();
+  const setAllTags = useCourses.use.setAllTags();
 
   return useQuery({
-    queryKey: [QUERY_KEYS.GET_CATEGORIES],
+    queryKey: [QUERY_KEYS.GET_COURSES],
     queryFn: () =>
-      instance.get<TCategory[]>("/docs/courses.json").then(res => res.data),
+      instance.get<TCourses[]>("/docs/courses.json").then(res => res.data),
     ...noRefetch,
     refetchInterval: false,
     refetchOnMount: true,
     onSuccess: res => {
-      setCategories(res);
+      setCourses(res);
       setAllTags();
     },
   });

@@ -1,12 +1,13 @@
-import { Sidebar } from "@/features";
-import { useCategoriesQuery } from "./module";
+import { CourseTable, Sidebar } from "@/features";
+import { useCoursesQuery } from "./module";
 
 export const MainPage = () => {
-  useCategoriesQuery();
+  useCoursesQuery();
 
   return (
     <>
       <Sidebar />
+      <CourseTable />
     </>
   );
 };

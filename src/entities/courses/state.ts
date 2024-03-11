@@ -3,11 +3,11 @@ import { ActionsType, StateType } from "./types";
 import { createSelectors } from "@/shared";
 import { getUniqueTags } from "./lib";
 
-const useCategoriesBase = create<StateType & ActionsType>(set => ({
+const useCoursesBase = create<StateType & ActionsType>(set => ({
   state: {
     currentTag: null,
     allTags: [],
-    categories: [],
+    courses: [],
   },
   setTag: tag =>
     set(store => ({
@@ -20,16 +20,16 @@ const useCategoriesBase = create<StateType & ActionsType>(set => ({
     set(store => ({
       state: {
         ...store.state,
-        allTags: getUniqueTags(store.state.categories),
+        allTags: getUniqueTags(store.state.courses),
       },
     })),
-  setCategories: categories =>
+  setCourses: courses =>
     set(store => ({
       state: {
         ...store.state,
-        categories: [...categories],
+        categories: [...courses],
       },
     })),
 }));
 
-export const useCategories = createSelectors(useCategoriesBase);
+export const useCourses = createSelectors(useCoursesBase);

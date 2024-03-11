@@ -1,4 +1,4 @@
-export type TCategory = {
+export type TCourses = {
   name: string;
   id: string;
   image: string;
@@ -10,12 +10,12 @@ export type StateType = {
   state: {
     currentTag: string | null;
     allTags: string[];
-    categories: TCategory[];
+    courses: TCourses[];
   };
 };
 
 export type ActionsType = {
   setTag: (tag: string | null) => void;
   setAllTags: () => void;
-  setCategories: (categories: TCategory[]) => void;
+  setCourses: (courses: TCourses[]) => void;
 };

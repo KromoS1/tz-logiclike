@@ -1,19 +1,7 @@
 import { ButtonNameCourse } from "@/shared";
 import "./style.scss";
-import { useCategories } from "@/entities";
-import { useCallback, useMemo } from "react";
-
-const useTags = () => {
-  const allTags = useCategories.use.state().allTags;
-  const currentTag = useCategories.use.state().currentTag;
-  const setTag = useCategories.use.setTag();
-
-  const selectTag = useCallback((tag: string | null) => {
-    setTag(tag);
-  }, []);
-
-  return { currentTag, allTags, selectTag };
-};
+import { useMemo } from "react";
+import { useTags } from "./module";
 
 export const Sidebar = () => {
   const { currentTag, allTags, selectTag } = useTags();
